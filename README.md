@@ -10,7 +10,7 @@
 - **Static File Serving**: Supports serving HTML, CSS, JavaScript, images, and more.
 - **MIME Type Detection**: Detects and serves the correct MIME type for files.
 
-This version is clearer and formatted for better readability. Let me know if you need further adjustments!
+This version is clearer and formatted for better readability. Let me know if you need further adjustments! & Did some changes in server file
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ This version is clearer and formatted for better readability. Let me know if you
     npm install
 
 4.Start the server:
-  ```bash
-  node https-server.js
+   ```bash
+    node https-server.js
 
-  did some changes in my server file
+
