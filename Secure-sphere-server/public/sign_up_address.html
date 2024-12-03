@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./images/logo-url.png">
+  <title>PicShop - Store for Camera and accessories</title>
+  <link rel="stylesheet" href="sign_up_address.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body style="background-color: white;">
+  <header class="navbar navbar-expand-lg">
+    <div class="navigation-logo">
+      <img class="img-fluid" src="./images/logo.png" alt="logo">
+    </div>
+    <div class="search-bar ">
+      <form class="d-flex justify-content-center">
+        <label for="search-bar"></label>
+        <input class="form-control me-2 rounded-pill" type="text" placeholder="Search" id="search-bar">
+        <button class="btn btn-outline-dark rounded-pill" type="button">Search</button>
+      </form>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar-items">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="homeLink">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Testimonials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <button id="signInButton" class="btn btn-outline-dark">Sign In</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main data-bs-theme="dark">
+    <div class="main-tagline">
+      <div class="logo-name">PICSHOP</div>
+      <div class="tagline"><span style="opacity: 0.75">"Your Story</span> <br><span style="opacity: 0.5">Through
+          Our Lens"</span>
+      </div>
+    </div>
+    <div class="login-box">
+      <div class="login-tittle">
+        <p>SIGN UP</p>
+      </div>
+      <form>
+        <div class="main-form">
+          <div class="col-md-12">
+            <label for="inputState" class="form-label">State/UT</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Ladakh">Ladakh</option>
+              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Address 2</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-12">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity" placeholder="City">
+            </div>
+          <div class="col-md-12">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip" placeholder="zip-code">
+            </div>
+          </div>
+          <div id="warning-message" class="warning-message" style="display: none;">Please fill out all required fields before proceeding.</div>
+          <div class="button ">
+            <button type="button" id="button-cancel" class="btn btn-outline-dark">Cancel</button>
+            <button type="button" id="button-create-account" class="btn btn-outline-dark">Create Account</button>
+      </div>
+      </form>
+    </div>
+  </main> <!--
+  <script>
+    document.getElementById('homeLink').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      window.location.href = 'landingpage.html'; // Redirect to landing-page.html
+    });
+  </script>
+  <script>
+    document.getElementById('signInButton').addEventListener('click', function () {
+      window.location.href = 'sign_in.html';
+    });
+  </script>
+  <script>
+    document.getElementById('button-cancel').addEventListener('click', function() {
+      window.location.href = 'sign_up_password.html';
+    });
+  </script>
+  <script>
+    document.getElementById('button-create-account').addEventListener('click', function() {
+      window.location.href = 'homepage.html';
+    });
+  </script> -->
+  <script src="./sign_up_address.js"></script>
+<!--  <script src="link.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navigation-bar {
+    width: 100%;
+    height: 12vh;
+    position: sticky;
+    z-index: 10;
+}
+
+.navbar .search-bar {
+    position: relative;
+    left: 10rem;
+}
+
+.navigation-logo img{
+    height: 5rem;
+    width: 5rem;
+    margin: 0 2rem;
+}
+
+#search-bar{
+    width: 450px;
+}
+
+.search-bar .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.search-bar .btn:active {
+    transform: scale(0.8);
+    transition: transform .2s ease-in;
+}
+
+.navbar #myNavbar-items {
+    position: relative;
+    left: 10rem;
+    font-size: 1.2rem;
+}
+
+#myNavbar-items ul li {
+    margin: 0 0.5rem;
+
+}
+
+#myNavbar-items ul li:hover {
+    color: black;
+}
+
+
+.nav-item:active {
+    transform: scale(0.8);
+    transition: transform .2s ease-in;
+}
+
+.navigation-logo img{
+    height: 5rem;
+    width: 5rem;
+    margin: 0 2rem;
+}
+
+/*Brand Tittle*/
+.brand-tittle {
+    background-color: #001D3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brand-tittle p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 0.5rem;
+    color: white;
+}
+
+.brands-logo {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.brands-logo div > img {
+    margin: 1rem 4.5rem 2rem 4.5rem;
+    width: 10rem;
+    height: 5rem;
+}
+
+.brands-logo div > img:hover {
+    box-shadow: 0 0 2rem #4d5154;
+    border-radius: 0.25rem;
+}
+
+.brands div > img:active {
+    transform: scale(0.8);
+    transition: transform .2s ease-in;
+    box-shadow: none;
+}
+
+/* top trending */
+.recommended-cameras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#card {
+    height: 25rem;
+    width: 20rem;
+    display: inline-block;
+    margin: 2rem;
+    text-align: center;
+}
+
+#card img {
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    padding: 1.5rem;
+}
+
+#desc {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+#name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#card:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 0 10px black;
+}
+
+
+
+/* All camera class */
+.all-logo {
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.all-cameras {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.all-cameras > div {
+    height: 25rem;
+    width: 20rem;
+    margin: 2rem;
+}
+
+
+/* sony */
+
+.sony-banner {
+    width: 100vw;
+    height: 20rem;
+    background-image: url("sony/sonym.png");
+    background-size: cover;
+}
+
+/* Cannon */
+.cannon-banner {
+    width: 100vw;
+    height: 50rem;
+    background-image: url("./cannon/cannon.jpg");
+    background-size: cover;
+}
+
+.newly-launched {
+    position: relative;
+    top: 15rem;
+    left: 5rem;
+}
+.newly {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+.camera-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+    font-size: 2.75rem;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+.starting {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Nikon */
+.nikon-banner {
+    width: 100vw;
+    height: 40rem;
+}
+
+/* Fujifilm */
+.fujifilm-banner {
+    width: 100vw;
+    height: 40rem;
+    background-image: url("./fujifilm/fujifilm.png");
+    background-size: cover;
+}
+
+/* Tamron */
+.tamron-banner {
+    width: 100vw;
+    height: 50rem;
+    background-image: url("./tamron/tamron.png");
+    background-size: cover;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 60%;
+    background-color: lightgrey;
+}
+
+/* Footer Content */
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.footer-content div {
+    width: 22.5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 30rem;
+}
+
+.footer-company {
+    height: 30rem;
+    width:25%;
+}
+
+.footer-company div {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: -2rem;
+}
+
+.footer-company div p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #001D3D;
+}
+
+.footer-company div a {
+    margin: 0.5rem auto;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #001D3D;
+}
+
+.footer-company div a:hover {
+    color: #030303;
+    text-decoration: underline;
+}
+
+.footer-company div a:active {
+    transform: scale(0.8);
+    transition: transform 0.2s ease-in;
+}
+
+.footer-support {
+    height: 30rem;
+    width:25%;
+}
+
+.footer-support div {
+    width: 100%;
+    position: relative;
+    top: -6rem;
+}
+
+.footer-support div p {
+    margin: 0.1rem auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #001D3D;
+}
+
+.footer-support div a {
+    margin: 0.5rem auto;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #001D3D;
+}
+
+.footer-support div a:hover {
+    color: #030303;
+    text-decoration: underline;
+}
+
+.footer-support div a:active {
+    transform: scale(0.8);
+    transition: transform 0.2s ease-in;
+}
+
+.footer-store div {
+    margin: 1rem auto;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 2rem;
+}
+
+.footer-store div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.footer-store div img:active {
+    transform: scale(0.8);
+    transition: transform 0.2s ease-in;
+}
+
