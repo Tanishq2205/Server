@@ -1,4 +1,3 @@
-
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
@@ -11,9 +10,8 @@ let db, client;
 const options = {
   key: fs.readFileSync(path.join(__dirname, "key.pem")),
   cert: fs.readFileSync(path.join(__dirname, "cert.pem")),
-
+  
 };
-
 
 const mimetypes = {
   css: "text/css",
@@ -28,12 +26,12 @@ const mimetypes = {
 // Connect to MongoDB
 async function connectToDatabase() {
   try {
-    client = await MongoClient.connect(mongoUrl);
+    client = await MongoClient.connect(mongoUrl); // Removed deprecated option
     db = client.db(dbName);
     console.log("Connected to MongoDB");
   } catch (err) {
     console.error("Error connecting to MongoDB:", err);
-    process.exit(1); 
+    process.exit(1);
   }
 }
 
@@ -48,12 +46,12 @@ async function insertClientData(collectionName, clientData) {
 }
 
 async function handleFormSubmission(req, res) {
-  let body = "";   //Declares an empty string body to hold the raw incoming form data
+  let body = "";
   req.on("data", (chunk) => {
-    body += chunk.toString(); //Appends the incoming data to the body string
+    body += chunk.toString();
   });
 
-  req.on("end", async () => {  
+  req.on("end", async () => {
     try {
       console.log("Raw form data received:", body);
 
@@ -68,11 +66,9 @@ async function handleFormSubmission(req, res) {
 
       console.log("Parsed client data:", clientData);
 
-
       await insertClientData("clients", clientData);
       await insertClientData("clientLogs", clientData);
 
-      
       const logMessage = `Time: ${clientData.time}\nName: ${clientData.name}\nEmail: ${clientData.email}\nIP: ${clientData.ip}\nUser-Agent: ${clientData.userAgent}\n\n`;
       fs.appendFileSync(path.join(__dirname, "client_logs.txt"), logMessage);
       console.log("Client details logged to file.");
@@ -87,11 +83,15 @@ async function handleFormSubmission(req, res) {
   });
 }
 
-
 function serveStaticFiles(req, res) {
   const safePath = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, "");
-  const filePath = path.join(__dirname, "public", safePath);
-  const extname = path.extname(filePath).substring(1); 
+  let filePath = path.join(__dirname, "public", safePath);
+
+  if (req.url === "/" || safePath === "") {
+    filePath = path.join(__dirname, "public", "landingpage.html");
+  }
+
+  const extname = path.extname(filePath).substring(1);
   const contentType = mimetypes[extname] || "application/octet-stream";
 
   fs.stat(filePath, (err, stats) => {
@@ -111,7 +111,6 @@ function serveStaticFiles(req, res) {
     }
   });
 }
-
 
 function serveFile(filePath, contentType, res) {
   fs.readFile(filePath, (err, content) => {
@@ -147,7 +146,6 @@ async function startServer() {
   });
 }
 
-
 function shutdownServer() {
   server.close(() => {
     console.log("Server shut down gracefully.");
@@ -160,6 +158,11 @@ process.on("SIGINT", () => {
   console.log("\nReceived SIGINT. Shutting down the server...");
   shutdownServer();
   process.exit(0);
+});
+
+process.on("unhandledRejection", (reason) => {
+  console.error("Unhandled Rejection:", reason);
+  process.exit(1);
 });
 
 startServer();
