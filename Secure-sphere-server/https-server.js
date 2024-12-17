@@ -10,6 +10,7 @@ let db, client;
 const options = {
   key: fs.readFileSync(path.join(__dirname, "key.pem")),
   cert: fs.readFileSync(path.join(__dirname, "cert.pem")),
+  
 };
 
 const mimetypes = {
@@ -25,7 +26,7 @@ const mimetypes = {
 // Connect to MongoDB
 async function connectToDatabase() {
   try {
-    client = await MongoClient.connect(mongoUrl);
+    client = await MongoClient.connect(mongoUrl); // Removed deprecated option
     db = client.db(dbName);
     console.log("Connected to MongoDB");
   } catch (err) {
@@ -165,4 +166,3 @@ process.on("unhandledRejection", (reason) => {
 });
 
 startServer();
-
