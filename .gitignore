@@ -1,1 +1,14 @@
 node_modules
+key.perm
+csr.perm
+cert.perm
+
+/cert
+/key
+/csr
+client_log.txt
+/perm
+
+
+package-lock.json
+package.json
